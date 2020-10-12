@@ -8,3 +8,9 @@ install:
 
 script:
   - flake8
+
+after_success:
+  - python notify.py success
+
+after_failure:
+  - python notify.py fail
